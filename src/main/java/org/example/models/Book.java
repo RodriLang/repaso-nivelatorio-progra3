@@ -2,6 +2,7 @@ package org.example.models;
 
 import org.example.enums.MaterialStatus;
 import org.example.exceptions.InvalidLoanException;
+import org.example.exceptions.MaterialNotAvailableException;
 import org.example.interfaces.Loanable;
 
 import java.util.Objects;
@@ -22,7 +23,7 @@ public class Book extends Material implements Loanable {
     @Override
     public void loan() throws InvalidLoanException {
         if (status.equals(MaterialStatus.LOANED)) {
-            throw new InvalidLoanException("El libro ya está prestado.");
+            throw new MaterialNotAvailableException("El libro ya está prestado.");
         }
         status = MaterialStatus.LOANED;
     }

@@ -17,8 +17,8 @@ public class MenuController {
     private final LibraryService library;
     private final Scanner scanner;
 
-    public MenuController(LibraryService library) {
-        this.library = library;
+    public MenuController() {
+        this.library = new LibraryService();
         this.scanner = new Scanner(System.in);
     }
 

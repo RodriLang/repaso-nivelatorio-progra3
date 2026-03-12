@@ -7,11 +7,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        LibraryService library = new LibraryService();
+        InitializationData.initData();
 
-        InitializationData.initData(library);
-
-        MenuController menu = new MenuController(library);
+        MenuController menu = new MenuController();
 
         menu.start();
     }

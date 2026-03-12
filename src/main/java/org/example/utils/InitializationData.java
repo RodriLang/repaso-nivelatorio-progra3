@@ -6,10 +6,12 @@ import org.example.services.LibraryService;
 
 public class InitializationData {
 
+    private static final LibraryService library = new LibraryService();
+
     private InitializationData() {
     }
 
-    public static void initData(LibraryService library) {
+    public static void initData() {
 
         library.registerUser("Ana");
         library.registerUser("Luis");
